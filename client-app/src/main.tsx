@@ -2,12 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './app/layout/styles.css'
 import "semantic-ui-css/semantic.min.css"
-import App from './app/layout/App'
 import { StoreContext, store } from './app/stores/store'
+import { RouterProvider } from 'react-router-dom'
+import { Router } from './app/router/routes'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <StoreContext.Provider value={store}>
-    <App />
+    <RouterProvider router={Router}/>
     </StoreContext.Provider>
   </React.StrictMode>,
 
